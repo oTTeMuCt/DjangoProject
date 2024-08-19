@@ -1,0 +1,28 @@
+@use './resets';
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 100px 10px 100px;
+
+    a,
+    input {
+        display: inline-block;
+        border: none;
+        outline: none;
+    }
+
+    .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        .searchbar-warpper-parent {
+            width: 300px;
+        }
+    }
+}

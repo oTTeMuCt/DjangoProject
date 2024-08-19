@@ -1,0 +1,33 @@
+button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: snow;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: #FF7400;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 100px 10px 100px;
+}
+nav a,
+nav input {
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+nav .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+nav .left .searchbar-warpper-parent {
+  width: 300px;
+}/*# sourceMappingURL=navbar.css.map */
