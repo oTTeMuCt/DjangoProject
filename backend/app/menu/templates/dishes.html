@@ -1,0 +1,101 @@
+{% load static %}
+<style>
+    .menu-section-wrapper {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-section {
+        position: relative;
+        top: 600px;
+        max-width: 1200px;
+        padding: 40px;
+        text-align: center;
+    }
+    
+    .menu-section h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 100px;
+    }
+    
+    .highlight {
+        color: #C48228; 
+    }
+    
+    .menu-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .main-dish img {
+        position: relative;
+        top: -5px;
+        width: 100%;
+        max-width: 410px;
+    }
+    
+    .dish-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 700px;
+        text-align: left;
+    }
+    
+    .dish-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .dish-item img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .dish-item p {
+        flex-grow: 1;
+        font-size: 18px;
+    }
+    
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+    }
+    
+</style>
+<div class="menu-section-wrapper">
+    <div class="menu-section">
+        <h2>Наши <span class="highlight">Блюда</span></h2>
+        <div class="menu-container">
+            <div class="main-dish">
+                <img src="{% static 'imgs/main-dish.png' %}" alt="">
+            </div>
+            <div class="dish-list">
+                <div class="dish-item">
+                    <img src="{% static 'imgs/mini-burger.png' %}" alt="">
+                    <p>Гамбургер мини --------------------</p>
+                    <span class="price">220 ₽</span>
+                </div>
+                <div class="dish-item">
+                    <img src="{% static 'imgs/mini-burger.png' %}" alt="">
+                    <p>Гамбургер мини --------------------</p>
+                    <span class="price">220 ₽</span>
+                </div>
+                <div class="dish-item">
+                    <img src="{% static 'imgs/mini-burger.png' %}" alt="">
+                    <p>Гамбургер мини --------------------</p>
+                    <span class="price">220 ₽</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
