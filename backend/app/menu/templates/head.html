@@ -45,6 +45,7 @@
 }
 
 </style>
+<div class="menu-conteiner-wrapper">
 <div class="menu-conteiner">
     <img src="{% static 'imgs/back.png' %}" class="back-img"> 
     <div class="menu-text">
@@ -53,4 +54,8 @@
         <p class="p-size-thr">---ДОМ ЛУЧШЕЙ ЕДЫ---</p>
         <button>VIEW MENU</button>
     </div>
+</div>
+<div class="menu-cards-wrapper">
+    {% include 'cards.html' %}
+</div>    
 </div>

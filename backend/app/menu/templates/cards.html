@@ -1,0 +1,68 @@
+{% load static %}
+<style>
+    .card-container {
+        position: relative;
+        top: 550px;
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 300px;
+        height: 250px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        background-color: snow;
+        -webkit-box-shadow: 1px 8px 36px 7px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 1px 8px 36px 7px rgba(34, 60, 80, 0.2);
+        box-shadow: 1px 8px 36px 7px rgba(34, 60, 80, 0.2);
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: #B8860B; /* Light brown color */
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.4;
+    }
+</style>
+<div class="card-container">
+    <div class="card">
+        <div class="icon"><img src="{% static 'icons/plate.png' %}" alt=""></div>
+        <div class="title">Магическая <span class="highlight">Атмосфера</span></div>
+        <div class="description">В нашем заведении царит магическая атмосфера, наполненная вкусными ароматами</div>
+    </div>
+    <div class="card">
+        <div class="icon"><img src="{% static 'icons/plate.png' %}" alt=""></div>
+        <div class="title">Лучшее качество <span class="highlight">Еды</span></div>
+        <div class="description">Качество нашей Еды - отменное!</div>
+    </div>
+    <div class="card">
+        <div class="icon"><img src="{% static 'icons/plate.png' %}" alt=""></div>
+        <div class="title">Недорогая <span class="highlight">Еда</span></div>
+        <div class="description">Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!</div>
+    </div>
+</div>
+
+</div>
