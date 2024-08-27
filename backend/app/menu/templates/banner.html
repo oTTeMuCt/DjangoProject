@@ -1,0 +1,60 @@
+{% load static %}
+    <style>
+        .banner {
+            top: 800px;
+            background-image: url({% static 'imgs/banner.png' %});
+            position: relative;
+            padding: 60px 30px;
+            color: #fff;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 200px;
+            
+        }
+
+
+        .banner-content {
+            position: relative;
+            left: 150px;
+            max-width: 600px;
+        }
+
+        .banner-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #D67E34; /* Orange color */
+        }
+
+        .banner-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .banner-button {
+            position: relative;
+            right: 150px;
+            background-color: #ff6600; /* Orange button color */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .banner-button:hover {
+            background-color: #e65500; 
+        }
+    </style>
+
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Отпразднуйте в одном из самых лучших ресторанов.</h2>
+            <p>Только в этом месяце бизнес-ланч от 250 ₽</p>
+        </div>
+        <button class="banner-button">ЗАКАЗ СТОЛИКА</button>
+    </div>

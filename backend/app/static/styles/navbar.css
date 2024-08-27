@@ -77,6 +77,10 @@ nav .left {
   cursor: pointer;
 }
 
+.nav-order-button:hover {
+  background-color: #e65500;
+}
+
 .phone-connect {
   position: relative;
   align-items: center;
