@@ -2,7 +2,7 @@
 
 $color_1: aliceblue;
 $color_2: snow;
-$background-color_1: gray;
+$background-color_1: transparent;
 $background-color_2: aliceblue;
 $background-color_3: #FF7400;
 
@@ -17,7 +17,7 @@ nav {
 	align-items: center;
 	gap: 20px;
 	padding: 20px 100px 10px 100px;
-	background-color: $background-color_1;
+	background-color: transparent;
 	a {
 		display: inline-block;
 		border: none;

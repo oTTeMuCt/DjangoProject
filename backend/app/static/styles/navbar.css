@@ -20,7 +20,7 @@ nav {
   align-items: center;
   gap: 20px;
   padding: 20px 100px 10px 100px;
-  background-color: gray;
+  background-color: transparent;
 }
 nav a {
   display: inline-block;

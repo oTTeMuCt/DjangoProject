@@ -1,6 +1,11 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" />
+<style>
+  nav {
+    background-color: transparent;
+  }
+</style>
 <nav>
     <div class="left">
       <a href="{% url 'landing_page' %}" id="logo"><img src="{% static 'icons/logo.png' %}" alt=""></a>
