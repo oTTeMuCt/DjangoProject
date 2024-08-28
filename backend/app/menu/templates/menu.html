@@ -1,0 +1,196 @@
+{% load static %}
+
+<style>
+    .menu-section-sc {
+
+        position: relative;
+        top: 600px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        background-image: url({% static 'imgs/bar-banner.png' %});
+        background-size: cover;
+        color: white;
+        height:900px;
+    }
+    
+    .menu-section h2 {
+        font-size: 40px;
+        margin-bottom: 100px;
+    }
+    
+    .menu-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .menu-card {
+        background-color: white;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .recommended {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #FF6F00;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .menu-image {
+        position: relative;
+        top: 50px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    
+    .price-circle {
+        position: absolute;
+        background-color: #C48228;
+        color: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        z-index: 1;
+        bottom: 250px;
+        left: 180px;
+        border: snow solid 5px;
+        justify-content: center;
+        align-items: center;
+        margin: -30px auto 20px auto;
+        font-size: 18px;
+    }
+    
+    .menu-card h3 {
+        position: relative;
+        top: 70px;
+        color: #333;
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    .menu-card p {
+        position: relative;
+        top: 80px;
+        left: 17%;
+        width: 190px;
+        height: 170px;
+        color: #666;
+        font-size: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    .order-btn {
+        position: relative;
+        bottom: 30px;
+        background-color: #C48228;
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-box-shadow: 0px 8px 16px 1px rgba(34, 60, 80, 0.29);
+        -moz-box-shadow: 0px 8px 16px 1px rgba(34, 60, 80, 0.29);
+        box-shadow: 0px 8px 16px 1px rgba(34, 60, 80, 0.29);
+    }
+    
+    .order-btn:hover {
+        background-color: #A9651A;
+    }
+    
+    .testimonial-section {
+        position: relative;
+        top: 600px;
+        background-color: #E5E5E5;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .testimonial-section p {
+        font-size: 20px;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto 30px auto;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .author-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    
+    .testimonial-author div h4 {
+        font-size: 25px;
+        margin: 0;
+    }
+    
+    .testimonial-author div p {
+        font-size: 20px;
+        color: #999;
+        margin: 5px 0 0 0;
+    }
+    
+</style>
+    <div class="menu-section-sc">
+        <h2>Наше меню</h2>
+        <div class="menu-cards">
+            <div class="menu-card">
+                <div class="recommended">RECOMMENDED</div>
+                <img src="{% static 'imgs/burger.png' %}" alt="" class="menu-image">
+                <div class="price-circle">420 ₽</div>
+                <h3>Гамбургер макси</h3>
+                <p>Максимально толстый слой мяса</p>
+                <button class="order-btn">ЗАКАЗАТЬ</button>
+            </div>
+            <div class="menu-card">
+                <img src="{% static 'imgs/burger.png' %}" alt="" class="menu-image">
+                <div class="price-circle">420 ₽</div>
+                <h3>Гамбургер макси</h3>
+                <p>Максимально толстый слой мяса</p>
+                <button class="order-btn">ЗАКАЗАТЬ</button>
+            </div>
+            <div class="menu-card">
+                <img src="{% static 'imgs/burger.png' %}" alt="" class="menu-image">
+                <div class="price-circle">420 ₽</div>
+                <h3>Гамбургер макси</h3>
+                <p>Максимально толстый слой мяса</p>
+                <button class="order-btn">ЗАКАЗАТЬ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-section">
+        <p>Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении! Отдельное спасибо за комплименты в виде фруктовой тарелки. Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующим в Санкт-Петербурге!!!</p>
+        <div class="testimonial-author">
+            <img src="{% static 'imgs/author.png' %}" alt="Посетитель Николай" class="author-image"> 
+            <div>
+                <h4>Посетитель</h4>
+                <p>Николай</p>
+            </div>
+        </div>
+    </div>
