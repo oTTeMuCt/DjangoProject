@@ -3,6 +3,7 @@
         .banner {
             top: 800px;
             background-image: url({% static 'imgs/banner.png' %});
+            background-size: cover;
             position: relative;
             padding: 60px 30px;
             color: #fff;
@@ -48,6 +49,42 @@
 
         .banner-button:hover {
             background-color: #e65500; 
+        }
+        @media (max-width: 1100px) {
+            .banner-content {
+                left: 50px;
+            }
+            .banner-button {
+                right: 50px;
+            }
+        } 
+        @media (max-width: 900px) {
+            .banner-content {
+                left: 10px;
+            }
+            .banner-button {
+                right: 10px;
+            }
+        }
+        @media (max-width: 770px) {
+            .banner-content {
+                left: 0;
+            }
+            .banner-button {
+                right: 0;
+            }
+        }
+        @media (max-width: 660px) {
+            .banner {
+                text-align: center;
+            }
+            .banner-button{
+                display: block;
+            }
+            .banner {
+                align-items: center;
+                flex-direction: column;
+            }
         }
     </style>
 
