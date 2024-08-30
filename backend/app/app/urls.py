@@ -19,9 +19,12 @@ from django.urls import path, include
 from reviews import views as review_views
 from django.conf import settings
 from django.conf.urls.static import static
+from reservations import views as reservation_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("menu.urls")),
     path('reviews/', review_views.review_list, name='review_list'),
+    path('reserve/', reservation_views.book_table, name='book_table'),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

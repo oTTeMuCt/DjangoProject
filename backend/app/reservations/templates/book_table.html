@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Бронирование столика</title>
+
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'styles/book_table.css' %}">
+
+{% endblock css%}
+
+
+
+{% block content %}
+<body>
+    <h1>Бронирование столика</h1>
+
+    {% if success_message %}
+    <div class="success-message">
+        {{ success_message }}
+    </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label for="next_action">Выберите действие:</label>
+        <select id="next_action" name="next_action">
+            <option value="success">Подтвердить бронирование</option>
+            <option value="cancel">Отменить бронирование</option>
+        </select>
+
+        <p>Итоговая сумма: <span id="totalPrice">0.00 руб.</span></p>
+        <button type="submit">Забронировать</button>
+    </form>
+
+{%endblock%}
+
+{% block script %}
+<script>
+    function calculateTotal() {
+        let numPeople = document.getElementById('id_num_people').value;
+        let pricePerPerson = {{ price_per_person }};
+        let totalPrice = numPeople * pricePerPerson;
+        document.getElementById('totalPrice').innerText = totalPrice.toFixed(2) + ' руб.';
+        document.getElementById('id_num_people').addEventListener('input', calculateTotal);
+    }
+</script>
+{% endblock script %}
