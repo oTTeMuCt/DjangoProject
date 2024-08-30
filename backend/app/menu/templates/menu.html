@@ -155,13 +155,14 @@
         margin: 5px 0 0 0;
     }
     @media (max-width: 1120px) {
-        .menu-cards :last-child{
+        #third {
             display: none;
-
-        }         
+        }       
     }
     @media (max-width: 768px) {
-
+        #second {
+            display: none;
+        }
     }
 
 
@@ -178,14 +179,14 @@
                 <p>Максимально толстый слой мяса</p>
                 <button class="order-btn">ЗАКАЗАТЬ</button>
             </div>
-            <div class="menu-card">
+            <div class="menu-card" id="second" >
                 <img src="{% static 'imgs/burger.png' %}" alt="" class="menu-image">
                 <div class="price-circle">420 ₽</div>
                 <h3>Гамбургер макси</h3>
                 <p>Максимально толстый слой мяса</p>
                 <button class="order-btn">ЗАКАЗАТЬ</button>
             </div>
-            <div class="menu-card">
+            <div class="menu-card" id="third">
                 <img src="{% static 'imgs/burger.png' %}" alt="" class="menu-image">
                 <div class="price-circle">420 ₽</div>
                 <h3>Гамбургер макси</h3>
