@@ -1,0 +1,25 @@
+$color_1: #333;
+$font-family_1: Arial, sans-serif;
+h1 {
+	color: $color_1;
+}
+h2 {
+	color: $color_1;
+}
+form {
+	margin-bottom: 20px;
+	p {
+		margin: 10px 0;
+	}
+}
+.reviews-list {
+	margin-top: 20px;
+}
+.review-item {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	img {
+		margin-top: 10px;
+		border-radius: 5px;
+	}
+}

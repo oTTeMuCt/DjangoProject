@@ -1,0 +1,27 @@
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+form p {
+  margin: 10px 0;
+}
+
+.reviews-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.review-item img {
+  margin-top: 10px;
+  border-radius: 5px;
+}/*# sourceMappingURL=reviews_style.css.map */
