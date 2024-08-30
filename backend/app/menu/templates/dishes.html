@@ -11,7 +11,6 @@
     .menu-section {
         position: relative;
         top: 600px;
-        max-width: 1200px;
         padding: 40px;
         text-align: center;
     }
@@ -37,7 +36,6 @@
         position: relative;
         top: -5px;
         width: 100%;
-        max-width: 410px;
     }
     
     .dish-list {
@@ -69,6 +67,27 @@
         font-weight: bold;
         color: #000;
     }
+    @media (max-width: 1000px) {
+        .desh {
+            display: none;
+           }
+    }
+    @media (max-width: 768px) {
+        .menu-container {
+            flex-direction: column;
+        }
+       .dish-list {
+        gap: 10px;
+       }
+    }
+    @media (max-width: 480px) {
+        .menu-container {
+            flex-direction: column;
+        }
+       .dish-list {
+        gap: 5px;
+       }
+    }
     
 </style>
 <div class="menu-section-wrapper">
@@ -81,17 +100,17 @@
             <div class="dish-list">
                 <div class="dish-item">
                     <img src="{% static 'imgs/mini-burger.png' %}" alt="">
-                    <p>Гамбургер мини --------------------</p>
+                    <p>Гамбургер мини <span class="desh">--------------------</span> </p>
                     <span class="price">220 ₽</span>
                 </div>
                 <div class="dish-item">
                     <img src="{% static 'imgs/mini-burger.png' %}" alt="">
-                    <p>Гамбургер мини --------------------</p>
+                    <p>Гамбургер мини <span class="desh">--------------------</span></p>
                     <span class="price">220 ₽</span>
                 </div>
                 <div class="dish-item">
                     <img src="{% static 'imgs/mini-burger.png' %}" alt="">
-                    <p>Гамбургер мини --------------------</p>
+                    <p>Гамбургер мини <span class="desh">--------------------</span></p>
                     <span class="price">220 ₽</span>
                 </div>
             </div>
