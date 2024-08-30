@@ -16,9 +16,9 @@
         height:900px;
     }
     
-    .menu-section h2 {
+    .menu-section-sc h2 {
         font-size: 40px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     
     .menu-cards {
@@ -154,10 +154,21 @@
         color: #999;
         margin: 5px 0 0 0;
     }
+    @media (max-width: 1120px) {
+        .menu-cards :last-child{
+            display: none;
+
+        }         
+    }
+    @media (max-width: 768px) {
+
+    }
+
+
     
 </style>
     <div class="menu-section-sc">
-        <h2>Наше меню</h2>
+        <h2>Наше <span>меню</span></h2>
         <div class="menu-cards">
             <div class="menu-card">
                 <div class="recommended">RECOMMENDED</div>
