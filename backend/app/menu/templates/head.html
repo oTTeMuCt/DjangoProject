@@ -48,7 +48,44 @@
     z-index: -1;
 }
 
+@media (max-width: 900px){
 
+    .menu-text{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+    }
+    
+    @media (max-width: 700px){
+        .menu-card-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
+    @media (max-width: 600px){
+        
+    
+    
+        @media (max-width: 400px){
+            .menu-text {
+                font-size: 0.9em;
+                p {
+                    font-size: 0.5em;
+                }
+            }
+        }
+    
+        @media (max-width: 300px){
+            .menu-text{
+                font-size: 0.2em;
+            }
+        }
+    
+    
+    
+}
 </style>
 <div class="menu-conteiner-wrapper">
 <div class="menu-conteiner">

@@ -2,6 +2,8 @@
 <style>
     .card-container {
         position: relative;
+        display: grid;
+        grid-template-columns:1fr;
         top: 550px;
         display: flex;
         gap: 60px;
@@ -14,8 +16,6 @@
         height: 250px;
         border: 1px solid #ddd;
         border-radius: 3px;
-        display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -46,6 +46,76 @@
         color: #555;
         line-height: 1.4;
     }
+    @media (min-width: 900px) {
+        .card {
+            flex: 1 1 280px;
+            max-width: 280px;
+        }
+    }
+    @media (max-width: 700px) {
+        display: block;
+        margin-bottom: 20px;
+        .card {
+            width: 100%;
+            height: auto;
+        }
+        .icon {
+            font-size: 20px;
+        }
+        .title {
+            font-size: 14px;
+        }
+        .description {
+            font-size: 12px;
+        }
+        .highlight {
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .card-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon {
+            font-size: 50px;
+        }
+        .title {
+            font-size: 22px;
+        }
+        .description {
+            font-size: 17px;
+        }
+        .highlight {
+            font-size: 17px;
+        }
+    }
+    @media (max-width: 350px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+    
+   
+
 </style>
 <div class="card-container">
     <div class="card">
