@@ -21,6 +21,14 @@
         margin: 0 auto;
         padding: 20px;
         margin-bottom: 30px;
+        h2 {
+            text-align: center;
+            margin-bottom: 100px;
+            color:gray;
+        }
+        span {
+            color: #C48228 ;
+        }
     }
     .rev-back  {
         width: 100%;
@@ -120,7 +128,7 @@
         <button type="submit">Отправить</button>
     </form>
     
-    <h2>Все отзывы</h2>
+    <h2>Все <span>отзывы</span></h2>
     <div class="reviews-list">
         {% for review in reviews %}
             <div class="review-item">
