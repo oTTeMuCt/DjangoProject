@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load socialaccount %}
+{% load account %}
+
+
+{% block css %}
+<style>
+   body
+    {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+
+    
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .pannel-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 30px;
+        color: #4CAF50;
+
+    }
+    .row {
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ff6600;
+        outline: none;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        width: 95%;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+
+
+    
+</style>
+
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="text-align: center; margin-top: 100px; margin-bottom: 50px;">Login</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="POST" action="{% url 'account_login' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-muted">
+            <small>
+                Don't have an account? 
+                <a href="{% url 'account_signup' %}">Sign up</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}

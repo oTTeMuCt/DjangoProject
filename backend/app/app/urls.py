@@ -26,5 +26,6 @@ urlpatterns = [
     path("", include("menu.urls")),
     path('reviews/', review_views.review_list, name='review_list'),
     path('reserve/', reservation_views.book_table, name='book_table'),
+    path('accounts/', include('allauth.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

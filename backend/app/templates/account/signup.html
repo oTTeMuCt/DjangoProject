@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load socialaccount %}
+{% load account %}
+
+{% block css %}
+<style>
+   
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        padding: 0;
+    }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin-top: 100px;
+        h1 {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #ff6600;
+        }
+        button {
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        small {
+            margin-top: 10px;
+        }
+        .social-login {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .social-login{
+            a {
+                color: #333;
+            }
+            a:hover {
+                color: #ff6600;
+            }
+        }
+
+    }
+    form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ff6600;
+        outline: none;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #e65500;
+    }
+
+
+</style>
+{% endblock css %}
+{% block title %}
+<title>Document</title>
+
+{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Signup</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="POST" action="{% url 'account_signup' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-muted">
+            <small>
+                Have an account? 
+                <a href="{% url 'account_login' %}">Sign in</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock content %}
