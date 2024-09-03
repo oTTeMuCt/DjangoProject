@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Confirm Deletion</title>
+
+{% endblock title %}
+{% block content %}
+<body>
+    <h1>Confirm Deletion</h1>
+    <p>Are you sure you want to delete the review "{{ review.name }}"?</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete it</button>
+        <a href="{% url 'review_list' %}"><button type="button">Cancel</button></a>
+    </form>
+</body>
+{% endblock content %}
+
