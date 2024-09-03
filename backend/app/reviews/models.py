@@ -1,13 +1,8 @@
 from django.db import models
 
+
 class Review(models.Model):
-    RATING_CHOICES = [
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    ]
+    RATING_CHOICES = [(i, str(i)) for i in range(1, 6)]
 
     name = models.CharField(max_length=100)
     comment = models.TextField()
@@ -17,3 +12,6 @@ class Review(models.Model):
 
     def __str__(self):
         return f'Review by {self.name} - Rating: {self.rating}'
+
+    def get_rating_display(self):
+        return "★" * self.rating
