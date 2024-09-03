@@ -15,6 +15,12 @@ def review_list(request):
 
     return render(request, 'review_list.html', {'reviews': reviews, 'form': form})
 
+def confirm_delete(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+    if request.method == 'POST':
+        review.delete()
+        return redirect('review_list')
+    return render(request, 'confirm_delete.html', {'review': review})
 
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
@@ -23,10 +29,14 @@ def delete_review(request, review_id):
         return redirect('review_list')
     return redirect('review_list')
 
-def confirm_delete(request, review_id):
+def update_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
     if request.method == 'POST':
-        review.delete()
-        return redirect('review_list')
-    return render(request, 'confirm_delete.html', {'review': review})
-
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():
+            form.save()
+            return redirect('review_list')
+    else:
+        form = ReviewForm(instance=review)
+    
+    return render(request, 'update_review.html', {'form': form, 'review': review})

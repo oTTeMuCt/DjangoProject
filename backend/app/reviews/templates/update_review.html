@@ -1,0 +1,26 @@
+{% load static %}
+
+
+{% block title %}
+<title>Update Review</title>
+
+{% endblock title %}
+
+
+{% block content %}
+<body>
+    <div class="wrapper">
+     <h1>Обновить отзыв</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить изменения</button>
+    </form>
+
+    <a href="{% url 'review_list' %}">Назад к списку отзывов</a>   
+    </div>
+    
+</body>
+
+{% endblock content %}

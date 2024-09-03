@@ -120,6 +120,10 @@
             object-fit: cover;
             margin-bottom: 20px;
         }
+        a {
+            text-decoration: none;
+            color: #C48228;
+        }
     }
 
 
@@ -152,13 +156,15 @@
                 <p>{{ review.comment }}</p>
                 <p class="date">Дата публикации: {{ review.created_at }}</p>
                 
-                <!-- Form to confirm deletion -->
                 <form action="{% url 'confirm_delete' review.id %}" method="get" style="display:inline;">
-                    <button type="submit" class="delete">Удалить</button>
+                    <button type="submit">Удалить</button>
                 </form>
+
+                <a href="{% url 'update_review' review.id %}">Изменить</a>
             </div>
         {% endfor %}
     </div>
 </div>
+
 {% endblock content %}
 
