@@ -8,7 +8,7 @@
 {% block css %}
 <style>
     body {
-        background-color: #f5f5f5;
+        background: linear-gradient(90deg, #aea4e3, #d3ffe8);
         font-family: Arial, sans-serif;
         padding: 20px;
         margin: 0;
@@ -20,7 +20,7 @@
     .wrapper {
         width: 400px;
         padding: 20px;
-        background-color: white;
+        background-color: snow;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
@@ -28,6 +28,7 @@
         text-align: center;
     }
     form {
+
         margin-top: 20px;
     }
     input[type="text"],
@@ -35,14 +36,20 @@
         width: 100%;
         padding: 10px;
         margin-bottom: 20px;
+        border-radius: 5px;
+        border: 2px solid #ff6600;
+        outline: none;
+        background: transparent;
+
     }
     button {
         padding: 10px 20px;
         background-color: #ff6600;
         color: white;
-        border: none;
         border-radius: 5px;
         cursor: pointer;
+        border: none;
+        outline: none;
     }
     button:hover {
         background-color: #e65500;
@@ -51,7 +58,7 @@
         color: #ff6600;
         text-decoration: underline;
     }
-    
+
     
 
 </style>
