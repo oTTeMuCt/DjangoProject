@@ -1,6 +1,21 @@
 {% load static %}
 <style>
 
+.menu-conteiner{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: url({% static 'imgs/back.png' %});
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    width:100%;  
+    
+
+}
 .menu-text {
     position: absolute;
     top: 50%;
@@ -41,14 +56,14 @@
         background-color: #e65500;
     }
 }
-.back-img {
+{% comment %} .back-img {
     width: 100%;
     height: 800px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-}
+} {% endcomment %}
 
 @media (max-width: 900px){
 
@@ -91,7 +106,7 @@
 </style>
 <div class="menu-conteiner-wrapper">
 <div class="menu-conteiner">
-    <img src="{% static 'imgs/back.png' %}" class="back-img"> 
+    {% comment %} <img src="{% static 'imgs/back.png' %}" class="back-img">  {% endcomment %}
     <div class="menu-text">
         <p class="p-size-fr">Добро пожаловать в</p>
         <p class="p-size-sc">Наш ресторан</p>
